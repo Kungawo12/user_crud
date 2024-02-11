@@ -1,0 +1,22 @@
+{%extends "layout.html"%}
+{%block body%}
+    <div class="container">
+        <div class="card mt-3">
+            <div class="card-body">
+                <h2 class="card-ttile">
+                    User {{user.id}}
+                </h2>
+                <p class="card-text">Full Name: {{user.first_name}} {{user.last_name}}</p>
+                <p class="card-text">Email: {{user.email}}</p>
+                <p class="card-text">Created On:{{user.created_at}}</p>
+                <p class="card-text">Last Updated: {{user.updated_at}}</p>
+            </div>
+            
+            <p><a href="/users/{{user.id}}/edit" class="m-2 link-info link-offset-2 link-underline-opacity-25link-underline-opacity-100-hover">Edit</a> | 
+                <a href="/users/delete/{{user.id}}" class="m-2 link-success link-offset-2 link-underline-opacity-25link-underline-opacity-100-hover">Delete</a>
+            </p>
+        
+        </div>
+        
+    </div>
+{%endblock%}
